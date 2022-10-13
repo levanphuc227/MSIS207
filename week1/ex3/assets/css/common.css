@@ -1,0 +1,33 @@
+.grid__row{
+    display: flex;
+
+}
+.grid_colunm2{
+    width: 50% ;
+}
+.section{
+    display: block;
+    border: 1px solid #dddddd;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 8px;
+}
+.section .title{
+    text-transform: uppercase;
+    color: #0056e0;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+.section a{
+    color: #08c;
+}
+.section i{
+    font-size: 10px;
+    margin-left: 0 4px;
+}
+.section .see-more{
+    display: float;
+    text-align: right;
+    text-decoration: underline;
+    padding: 4px;
+}

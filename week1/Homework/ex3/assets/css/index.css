@@ -1,0 +1,20 @@
+.list-company li img{
+    width: auto;
+}
+.list-company li h3{
+    font-weight: bold;
+}
+.classification-job{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+.classification-job li {
+    width: 25%;
+}
+.classification-job li div:first-child{
+    font-weight: bold;
+}
+#footer .block-center{
+    text-align: center;
+}

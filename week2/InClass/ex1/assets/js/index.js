@@ -58,11 +58,19 @@ try {
 }
 //5
 console.log(5)
-console.warn("Chưa có làm")
- 
-var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
+console.warn("đang có lỗi")
+const fs=require('fs') ;
+var jsonData = {"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]};
  
 var txtJsonData=JSON.stringify(jsonData)
 var f = "sometextfile.json";
 
+fs.writeText(f,txtJsonData,(err)=>{
+    if(err)
+    {
+        console.log(err);
+        throw err;
+    }
+    console.log("JSON data is saved.");
+})
 

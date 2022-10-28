@@ -1,0 +1,35 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#main {
+    background-color:#ccc;
+    margin: 0 12px;
+    padding:  32px;
+}
+
+.infor img {
+    width:50%;
+    margin: 16px;
+}
+
+.infor__addi .attri {
+    width: 100px;
+}
+
+.infor__addi .value {
+    width: 100%-100px;
+}
+
+.skill{
+    margin-top: 8px;
+}
+.skill .name-skill{
+    margin-bottom: 8px;
+}
+.skill .level-skill{
+    margin-right: 16px;
+    display: flex;
+    height: 22.5px !important;
+}

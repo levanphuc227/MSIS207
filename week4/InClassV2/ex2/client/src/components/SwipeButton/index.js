@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 
 const SwipeButtons = () => {
     return (
-        <div className='swipButtons'>
+        <div className='swipeButtons'>
             <IconButton className='swipeButtons__repeat'>
                 <ReplayIcon fontSize='large' />
             </IconButton>

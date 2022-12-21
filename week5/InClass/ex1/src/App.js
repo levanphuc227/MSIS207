@@ -1,0 +1,40 @@
+import logo from './logo.svg';
+import React, { useState, useEffect } from 'react'
+import './App.css';
+import Video from './video'
+import axios from './axios'
+
+function App() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await axios.get.apply('/v2/post')
+      setVideos(res.data)
+      return res
+    }
+    fetchData()
+  },[])
+  return (
+    <div className="App">
+      <div className='app_videos'>
+        {
+          videos.map(({url,channel, description,song,likes,shares,messages})=>(
+            <Video 
+            key={url}
+            url={url}
+            channel={channel}
+            description={description}
+            song={song}
+            likes={likes}
+            shares={shares}
+            messages={messages}
+            />
+          ))
+        }
+      </div>
+    </div>
+  );
+}
+
+export default App;

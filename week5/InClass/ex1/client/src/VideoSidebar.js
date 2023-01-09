@@ -9,16 +9,16 @@ import ShareIcon from '@mui/icons-material/Share';
 const VideoSidebar = ({ likes, shares, messages }) => {
     const [liked, setLiked] = useState(false);
     return (
-        <div className='videoSideBar'>
-            <div className='videoSideBar_button'>
+        <div className='VideoSidebar'>
+            <div className='videoSidebar__button'>
                 {liked ? <FavoriteIcon fontSize='large' onClick={e => setLiked(false)} /> : <FavoriteBorderIcon fontSize='large' onClick={e => setLiked(true)} />}
                 <p>{liked ? +liked + 1 : liked}</p>
             </div>
-            <div className='videoSideBar_button'>
+            <div className='videoSidebar__button'>
                 <MessageIcon fontSize='large' />
                 <p>{messages}</p>
             </div>
-            <div className='videoSideBar_button'>
+            <div className='videoSidebar__button'>
                 <ShareIcon fontSize='large' />
                 <p>{shares}</p>
             </div>

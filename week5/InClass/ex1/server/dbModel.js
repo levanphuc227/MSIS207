@@ -10,3 +10,4 @@ const shortVideoSchema =mongoose.Schema({
     messages:String
 })
 module.exports=  mongoose.model('shortVideos',shortVideoSchema);
+

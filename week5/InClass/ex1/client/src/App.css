@@ -17,7 +17,7 @@ html{
   max-width: 500px;
   scroll-snap-type: y mandatory;
 }
- .app_videos::-webkit-scrollbar{
+ .app__videos::-webkit-scrollbar{
   display: none;
  }
 

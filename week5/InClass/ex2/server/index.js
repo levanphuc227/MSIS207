@@ -7,7 +7,7 @@ const Messages = require("./dbMessages.js");
 const app = express();
 const port = process.env.PORT || 9000;
 const connection_url =
-  "mongodb+srv://hw4:75hwjb66vAAPJFvX@hw.ufteeco.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://video:lof9FZDfX1lEkLxI@cluster0.slj108v.mongodb.net/?retryWrites=true&w=majority";
 
 const pusher = new Pusher({
   appId: "1524599",

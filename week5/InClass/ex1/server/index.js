@@ -5,7 +5,7 @@ const Videos = require('./dbModel.js')
 
 const app = express()
 const port = process.env.PORT || 9000;
-const connection_url = 'mongodb+srv://hw4:75hwjb66vAAPJFvX@hw.ufteeco.mongodb.net/?retryWrites=true&w=majority'
+const connection_url = 'mongodb+srv://video:lof9FZDfX1lEkLxI@cluster0.slj108v.mongodb.net/?retryWrites=true&w=majority'
 
 app.use(express.json());
 app.use(Cors());
@@ -27,6 +27,7 @@ app.post('/v2/posts', (req, res) => {
 
         }
     })
+    // res.status(201).send(dbVideos);
 })
 app.get('/v2/posts', (req, res) => {
 

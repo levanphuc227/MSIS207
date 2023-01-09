@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Avatar } from "@mui/material";
-// import './SideBarChat.css'
+import './SidebarChat.css'
 
 const SideBarChat = ({ messages }) => {
   const [seed, setSeed] = useState("");
@@ -12,10 +12,10 @@ const SideBarChat = ({ messages }) => {
 
   return (
     <div className="sidebarChat">
-      <Avatar src="" />
-      <div className="sidebarChat_info">
+      <Avatar  src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
+      <div className="sidebarChat__info">
         <h2>Dev Help</h2>
-        <p>messages[messages.length-1]?messages</p>
+        <p>{messages[messages.length-1]?.messages}</p>
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ import { useStateValue } from "./components/StateProvider";
 
 function App() {
   const [messages, setMessages] = useState([]);
-  // const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
+  // const user=false;
 
   useEffect(() => {
     axios.get("/messages/sync").then((res) => {
@@ -21,10 +22,10 @@ function App() {
 
   useEffect(() => {
     const pusher = new Pusher("cd0c8e539d5f0329fa94", {
-      cluster: "ap2",
+      cluster: "ap1",
     });
 
-    const channel = pusher.subscribe("message");
+    const channel = pusher.subscribe("messages");
     channel.bind("inserted", (data) => {
       setMessages([...messages], data);
     });
@@ -34,18 +35,19 @@ function App() {
       channel.unsubscribe();
     };
   }, [messages]);
+  console.log(user);
   console.log(messages);
   return (
-    <div className="App">
+    <div className="app">
       <Login />
-      {/* {!user ? (
+      {!user ? (
         <Login />
       ) : (
         <div className="app_body">
           <Sidebar messages={messages} />
           <Chat messages={messages} />
         </div>
-      )} */}
+      )}
     </div>
     // <h1>test</h1>
   );
